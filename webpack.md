@@ -1,4 +1,9 @@
-    webpack优化
+参考资料
+https://www.cnblogs.com/libin-1/p/6596810.html webpack配置解析
+
+http://webpack.wuhaolin.cn/1%E5%85%A5%E9%97%A8/1-1%E5%89%8D%E7%AB%AF%E7%9A%84%E5%8F%91%E5%B1%95.html  《深入浅出webpack》 
+
+webpack优化
 ### 1.缩小文件搜索范围 ###
 webpack启动后会从入口entry递归解析项目所依赖的模块，所以当项目体量过大时，构建速度慢的问题就暴露出来，例如当我们打包1万个组件时，就需要优化文件的检索方式
 
@@ -43,3 +48,21 @@ webpack启动后会从入口entry递归解析项目所依赖的模块，所以�
 		   extensions: ['.js', '.json']	   
 		},
 	};`
+
+### 2.使用插件提升构建速度 ###
+1.dll 使用dllplugin生成动态链接库，模块只编译一次
+
+2.使用happypack 在构造时开启多个进程
+
+3.使用parallelUglifyPlugin,在生成生产环境压缩代码时候开启多进程
+
+### 3.减少开发时候的重复操作 ###
+1.开启文件更新监听与自动刷新
+2.开启模块热替换，使新修改的模块替换掉老的模块
+
+### 4.使用cdn来加快资源的获取速度 ###
+### 5.使用tree shaking去除死代码 ###
+### 6.使用CommonsChunkPlugin抽取js公共代码（依赖库代码） ###
+### 7.使用webpack内置的分割代码方式来实现按需加载 ###
+### 8.使用prepack在编译阶段用内置的js解释器求出代码运行的结果，优化js执行时间 ###
+###9.开启 Scope Hoisting (webpack3中的插件，优化构建后的文件) ###
