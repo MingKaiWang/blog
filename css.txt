@@ -1,0 +1,1 @@
+如何理解bfc，bfc是作为整个页面中的迷你元素，防止元素中的子元素不能外逃的一种状态  https://www.w3cplus.com/css/understanding-css-layout-block-formatting-context.html
