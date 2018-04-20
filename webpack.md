@@ -1,4 +1,4 @@
-参考资料
+﻿参考资料
 https://www.cnblogs.com/libin-1/p/6596810.html webpack配置解析
 
 http://webpack.wuhaolin.cn/1%E5%85%A5%E9%97%A8/1-1%E5%89%8D%E7%AB%AF%E7%9A%84%E5%8F%91%E5%B1%95.html  《深入浅出webpack》 
@@ -43,7 +43,7 @@ webpack启动后会从入口entry递归解析项目所依赖的模块，所以�
 	  },
 	};`
 
-##### 2.优化resolve配置#####
+##### 2.优化第三方模块#####
 (1). webpack在查找第三方模块位置的时候，回先从当前目录下./node_modules查找，如果当前目录下没有，则返回上级目录查找，在resovle下配置module绝对路径，优化第三方模块的查找时间。
 
 (2)指定入口文件描述字段，mainFields
@@ -79,6 +79,5 @@ webpack启动后会从入口entry递归解析项目所依赖的模块，所以�
 ### 4.使用cdn来加快资源的获取速度 ###
 ### 5.使用tree shaking去除死代码 ###
 ### 6.使用CommonsChunkPlugin抽取js公共代码（依赖库代码） ###
-### 7.使用webpack内置的分割代码方式来实现按需加载 ###
 ### 8.使用prepack在编译阶段用内置的js解释器求出代码运行的结果，优化js执行时间 ###
 ###9.开启 Scope Hoisting (webpack3中的插件，优化构建后的文件) ###
