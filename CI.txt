@@ -1,0 +1,2 @@
+Jenkins + gitlab 实现自动拉取
+https://blog.csdn.net/diyiday/article/details/78921843
