@@ -1,2 +1,5 @@
-Jenkins + gitlab 实现自动拉取
+Jenkins + gitlab 脢碌脧脰脳脭露炉脌颅脠隆
 https://blog.csdn.net/diyiday/article/details/78921843
+
+nodejs+docker
+https://segmentfault.com/a/1190000010541792
