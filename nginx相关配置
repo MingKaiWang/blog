@@ -1,0 +1,158 @@
+
+#user  nobody;
+#全局模块 设置进程数
+worker_processes  1;
+
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+
+#pid        logs/nginx.pid;
+
+# 事件模块，一个进程的最大连接数
+events {
+    worker_connections  1024;
+}
+
+#http模块
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+    #                  '$status $body_bytes_sent "$http_referer" '
+    #                  '"$http_user_agent" "$http_x_forwarded_for"';
+
+    #access_log  logs/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    #keepalive_timeout  0;
+    #链接超时事件s
+    keepalive_timeout  65;
+
+    #gzip  on;
+    #负载均衡 四种算法
+    #upstream mysvr { 
+    #  server 127.0.0.1:7878; 
+    #  server 192.168.10.121:3333 backup;  #热备     
+    #}
+    #轮询
+    #upstream mysvr { 
+    #  server 127.0.0.1:7878;
+    #  server 192.168.10.121:3333;       
+    #}
+    #加权轮询
+    upstream mysvr { 
+      server localhost:8080 weight=1;
+      server localhost:8080 weight=2;
+    }
+    #ip_hash:nginx会让相同的客户端ip请求相同的服务器。
+    #upstream mysvr { 
+    #  server 127.0.0.1:7878; 
+    #  server 192.168.10.121:3333;
+    #  ip_hash;
+    #}
+    #一个server
+    server {
+        #单连接请求上限次数
+        keepalive_requests 120; 
+        #ngxin 端口号
+        listen       9090;
+        #域名
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+        #反向代理设置
+        #代理设置
+        location /v2 {
+            root   /usr/local/etc/nginx/static;
+            index  index.html index.htm;
+            proxy_pass  http://mysvr; #定位到服务器列表
+        }
+        #静态资源位置
+        location / {
+            root   /usr/local/etc/nginx/static;
+            index  index.html index.htm;
+        }
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+        # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+        #
+        #location ~ \.php$ {
+        #    proxy_pass   http://127.0.0.1;
+        #}
+
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #
+        #location ~ \.php$ {
+        #    root           html;
+        #    fastcgi_pass   127.0.0.1:9000;
+        #    fastcgi_index  index.php;
+        #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+        #    include        fastcgi_params;
+        #}
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        #location ~ /\.ht {
+        #    deny  all;
+        #}
+    }
+
+    # another virtual host using mix of IP-, name-, and port-based configuration
+    #
+    #server {
+    #    listen       8000;
+    #    listen       somename:8080;
+    #    server_name  somename  alias  another.alias;
+
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}
+
+
+    #https与http2开启位置 需要下载 ssl模块与http2相应模块 
+    # HTTPS server
+    #
+    #server {
+
+        #开启http2的方法
+        #listen 443 ssl http2 default_server;
+        #比起默认的80 使用了443 默认 是ssl方式
+    #    listen       443 ssl;
+    #    server_name  localhost;
+         #开启  如果把ssl on；这行去掉，ssl写在443端口后面。这样http 80端口和https的链接都可以用
+         #listen 80;
+         #ssl on;
+         #证书(公钥.发送到客户端的)
+    #    ssl_certificate      cert.pem;
+         #私钥,
+    #    ssl_certificate_key  cert.key;
+
+    #    ssl_session_cache    shared:SSL:1m;
+    #    ssl_session_timeout  5m;
+
+    #    ssl_ciphers  HIGH:!aNULL:!MD5;
+    #    ssl_prefer_server_ciphers  on;
+
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}
+    include servers/*;
+}
