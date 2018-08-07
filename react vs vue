@@ -1,0 +1,8 @@
+              react                       vue
+数据            state                      data
+传递参数       单向props                    单向props
+生命周期       mount update unmounted       create mounted等
+路由          react-router                  vue-router
+状态管理      redux 单向flux                vux单向flux
+条件循环渲染   循环渲染借助于map jsx写法            v-for写法
+属性           没有计算监听属性
