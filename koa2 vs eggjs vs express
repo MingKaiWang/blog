@@ -1,5 +1,8 @@
 1.eggjs是koa2的上层框架，基于koa2封装
 2.eggjs遵循约定大于配置，基于mvc的目录结构，代码风格是定死的，中间件也是集成好可配置，利于多人协作开发。
 3.eggjs提供了定时器，cookie，session，extend等接口可以自由配置，并挂载到ctx上（eggjs项目的开发方式基于ctx），让开发更便捷。
-4.koa2是基于洋葱卷型中间件的。
+4.koa2是基于洋葱卷型中间件的， 提供了更大的操作空间。
 5.提供了很多插件 sequelize mongoose egg-validate egg-socket.io egg-router-plus'  egg-view-nunjucks
+6.express 的中间件是直线型的。
+7.koa剔除了express中的路由，静态文件部分，不在内核中绑定任何中间件。koa是比express更基础的框架，一切的建站问题由中间件来解决。
+express使用es5，koa使用es6，相比express增加了yield Generator解决回调嵌套， koa2使用es7增加了asyc await。
