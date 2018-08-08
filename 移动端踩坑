@@ -1,3 +1,11 @@
+一、适配方案
+引入手淘js文件，此文件会在html标签上自动添加font-size= window.innerWidth / 10
+所以拿到750px设计稿，就以75px计算rem，拿到640px设计稿，以64px计算rem。
+文字不用rem适配，用媒体查询直接写px
+
+二、开发技巧：
+
+三、常见问题：
 1.滚动穿透
 描述：遮罩层弹出，滚动屏幕遮罩下的body跟着滚动
 解决：1.body设置为overflow:hidden
