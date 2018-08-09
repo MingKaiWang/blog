@@ -25,3 +25,9 @@ http://www.w3cplus.com/mobile/lib-flexible-for-html5-layout.html
 解决： 1.用0.5px来写，ios8以下不支持
       2.渐变 背景渐变, 渐变在透明色和边框色中间分割
       3.构建1个伪元素, 将它的长宽放大到2倍, 边框宽度设置为1px, 再以transform缩放到50%.
+4.retina下，图片高清问题
+两倍图片(@2x)，然后图片容器缩小50%。
+如：图片大小，400×600;
+img标签
+width: 200px;
+height: 300px;
