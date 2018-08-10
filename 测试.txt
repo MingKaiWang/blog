@@ -1,5 +1,9 @@
 测试又分 单元测试 e2e测试 单元测试在开发时候与业务代码同步编写，属于白盒，e2e又测试人员编写，模拟ui操作，属于黑盒  单元测试 unit (karam + mocha) e2e（nightwatch）
 
 1.unit
-前端单元测试：mocha + expect（断言库）参考资料：https://www.cnblogs.com/sampapa/p/6963936.html
-后台单元测试: mocha + expect(断言库) + Supertest 参考资料：https://www.imooc.com/article/2631
+前端单元测试：mocha + expect（断言库) + '@vue/test-utils'(vue提供的单元测试库，提供开发者获取vue组件并实例化后的内部状态，以便阐述一个测试用例)
+参考资料：https://www.cnblogs.com/sampapa/p/6963936.html
+https://cn.vuejs.org/v2/cookbook/unit-testing-vue-components.html#%E5%9F%BA%E6%9C%AC%E7%9A%84%E7%A4%BA%E4%BE%8B
+
+后台单元测试: mocha + expect(断言库) + Supertest 
+参考资料：https://www.imooc.com/article/2631
