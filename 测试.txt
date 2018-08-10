@@ -14,4 +14,6 @@ https://cn.vuejs.org/v2/cookbook/unit-testing-vue-components.html#%E5%9F%BA%E6%9
 
 2.e2e
 前端ui测试：nightwatch(测试框架) + selenium（测试平台）
-参考资料： https://www.jianshu.com/p/936bee074b66
+参考资料： 
+https://www.jianshu.com/p/936bee074b66
+https://segmentfault.com/a/1190000006048066
