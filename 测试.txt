@@ -4,8 +4,10 @@
 前端单元测试：mocha + expect（断言库) + '@vue/test-utils'(vue提供的单元测试库，提供开发者获取vue组件并实例化后的内部状态，以便阐述一个测试用例)
 参考资料：https://www.cnblogs.com/sampapa/p/6963936.html
 https://cn.vuejs.org/v2/cookbook/unit-testing-vue-components.html#%E5%9F%BA%E6%9C%AC%E7%9A%84%E7%A4%BA%E4%BE%8B
+特点：主要是利用'@vue/test-utils'获取实例的内部状态，进行功能和渲染测试。
 
 后台单元测试: mocha + expect(断言库) + Supertest 
 参考资料：https://www.imooc.com/article/2631
+特点：主要利用supertest进行接口测试
 
 目前国内unit的最大问题在于，在用户意愿不明确并时常修改需求的情况下，如何阐述一个测试用例，这会拖慢整个开发进度
