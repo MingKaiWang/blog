@@ -1,0 +1,9 @@
+前端mock的几种方案
+1.在代码层硬编码，定义一个变量在前端存放所需数据
+2.mockjs拦截ajax（请求被拦截在前端，实际上没有发送出去）
+3.filder等抓包工具拦截ajax替换数据（真实性强）
+4.mocker-server平台，成本较高
+参考资料：
+https://www.jianshu.com/p/720b12b5d120
+mockjs使用教程
+https://segmentfault.com/a/1190000010592626
