@@ -5,6 +5,6 @@
 		
 		1.子元素浮动，父元素设置bfc解决高度塌陷
 		 
-		2.兄弟元素margin折叠，兄弟各套一个bfc父元素
+		2.兄弟元素margin折叠(塌陷)，兄弟各套一个bfc父元素
 
-		3.子元素设置margin，父元素设置bfc解决margin塌陷问题，防止margin外套
+		3.子元素设置margin，父元素设置bfc解决子元素margin外逃问题
