@@ -1,0 +1,12 @@
+1.pm2
+pm2是node进程管理工具，有如下功能
+1.内置进程负载均衡
+2.进程0秒重启，热重载
+3.进程监视
+4.进程日志
+5.服务后台运行
+6.进程管理，自动停止不稳定进程，并启动新进程来补位
+参考资料
+https://blog.csdn.net/starter_____/article/details/78926658
+https://blog.csdn.net/ningzheyuan/article/details/80590773
+https://www.cnblogs.com/xjnotxj/p/9314905.html
