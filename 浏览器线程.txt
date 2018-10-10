@@ -1,0 +1,2 @@
+一篇解释浏览器线程的文章，写的很清楚
+http://www.imweb.io/topic/58e3bfa845e5c13468f567d5
