@@ -13,23 +13,23 @@
 2.使用https替代http
 
 界面渲染类
+一、css优化
 1.使用css3开启gpu，使用requestAnimationFrame优化帧率
 2.避免频繁的重绘和重排
 3.尽量使用id选择器
 4.图片懒加载，数据按需加载
 5.减少float的使用，使用弹性盒
 6.使用ssr解决首屏渲染，增强seo
-
-缓存类
-1.使用localstorage嵌套iframe在前端做离线缓存
-2.使用max-age做长cache，合理利用缓存
-
-脚本类
+二、脚本优化
 1.使用arraybuffer操作内存
 2.不滥用闭包
 3.使用事件代理绑定事件
 4.避免频繁操作dom
 5.使用es6
+
+缓存类
+1.合理利用缓存 http协议缓存(使用max-age做长cach)/manifest离线缓存/localstorage本地存储（可使用iframe嵌套增加存储量）
+
 
 
 
