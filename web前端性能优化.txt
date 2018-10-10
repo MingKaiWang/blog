@@ -6,7 +6,7 @@
 5.dns预解析
 6.压缩css js文件大小
 7.使用http2
-8.code spliting
+8.使用webpack做code spliting
 9.资源预加载,hybird在native层加载资源
 10.数据懒加载按需加载，非首屏内容滚屏加载
 11.hybird资源本地打包成离线包
@@ -30,6 +30,8 @@
 缓存类
 1.合理利用缓存 http协议缓存(使用max-age做长cach)/manifest离线缓存/localstorage本地存储（可使用iframe嵌套增加存储量）
 
-
+安全类
+1.使用https对传输的数据加密
+2.使用webpack混淆代码
 
 
