@@ -13,3 +13,6 @@ beforecreated 数据 虚拟dom均未准备好  放置原生loading页面
 created 数据准备好 虚拟dom没有   发送ajax请求（因为要用到虚拟数据）
 beforemounted 数据准备好 虚拟dom挂载好
 mounted 虚拟dom渲染完成   结束原生loading页面
+
+beforeDestroy 卸载实例前  卸载事件 bus.off
+destroyed 实例完全卸载
