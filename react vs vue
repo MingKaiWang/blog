@@ -6,3 +6,10 @@
 状态管理      redux 单向flux                vux单向flux
 条件循环渲染   循环渲染借助于map jsx写法            v-for写法
 属性           没有计算监听属性
+
+
+vue生命周期用法
+beforecreated 数据 虚拟dom均未准备好  放置原生loading页面
+created 数据准备好 虚拟dom没有   发送ajax请求（因为要用到虚拟数据）
+beforemounted 数据准备好 虚拟dom挂载好
+mounted 虚拟dom渲染完成   结束原生loading页面
