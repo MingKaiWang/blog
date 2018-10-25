@@ -1,11 +1,11 @@
 资源加载类
 1.减少http请求
 2.使用cdn发布静态资源
-3.传输数据前gzip压缩数据
-4.使用iconfont svg替代图片
-5.dns预解析
-6.压缩css js文件大小
-7.使用http2
+3.dns预解析
+4.使用http2
+5.传输数据前gzip压缩数据
+6.使用iconfont svg替代图片
+7.压缩css js文件大小
 8.使用webpack做code spliting
 9.资源预加载,hybird在native层加载资源
 10.数据懒加载按需加载，非首屏内容滚屏加载
