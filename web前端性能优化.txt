@@ -20,6 +20,7 @@
 1.使用css3开启gpu，使用requestAnimationFrame优化帧率
 2.首屏样式内联
 3.避免频繁的重绘和重排
+4.css靠前，js脚本置后
 二、脚本优化
 1.使用arraybuffer操作内存
 2.不滥用闭包
