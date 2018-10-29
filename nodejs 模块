@@ -1,0 +1,8 @@
+1.文件模块  require('fs')
+2.通信模块  require('http')
+3.工具模块  require('util')
+4.事件模块 require('events')
+5.buffer模块 require('buffer')
+6.stream模块 require('stream')
+7.模块系统 export import
+8.进程模块  require('child_process')
