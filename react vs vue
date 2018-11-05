@@ -16,3 +16,8 @@ mounted 虚拟dom渲染完成   结束原生loading页面
 
 beforeDestroy 卸载实例前  卸载事件 bus.off
 destroyed 实例完全卸载
+
+
+不同点：react vue 在pc端的表现能力是相同的，不同的是react是一款view层的框架，没有双向绑定，开发风格更加严谨，表现出计算机科学的思想
+1.区分容器组件和傻瓜组件
+2.flux 增加reducer纯净函数概念
