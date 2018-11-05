@@ -10,3 +10,10 @@ pm2是node进程管理工具，有如下功能
 https://blog.csdn.net/starter_____/article/details/78926658
 https://blog.csdn.net/ningzheyuan/article/details/80590773
 https://www.cnblogs.com/xjnotxj/p/9314905.html
+
+2.alinode 性能监控与故障分析平台
+1.cpu占用情况
+2.内存占用情况
+3.GC时间占比，运行记录
+4.QPS
+5.故障分析工具。
