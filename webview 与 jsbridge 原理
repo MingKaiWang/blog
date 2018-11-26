@@ -1,0 +1,37 @@
+1.webView
+  1.原理: WebView是android中一个非常实用的组件，它和safai、chrome一样都是基于webkit网页渲染引擎,
+    webView是通过loadUrl(String url)加载界面的
+  2.辅助工具
+    1.WebViewClient: 就是辅助WebView处理各种通知、请求事件的
+       1.onPageStarted(WebView view, String url, Bitmap favicon) //这个事件就是开始载入页面调用的，
+       通常我们可以在这设定一个loading的页面，告诉用户程序在等待网络响应。
+       2.onReceivedError(WebView view, int errorCode, String description, String failingUrl)// (报告错误信息)
+     2.WebChormeClient：是辅助WebView处理Javascript的对话框，网站图标，网站title，加载进度等
+      1.onJsConfirm()//处理确认消息框
+      2.onJsAlert()//处理警告消息框 
+      3.onJsPrompt()//处理提示消息框 
+   3.通信
+    1. java调用js：那就是调用WebView.loadUrl()去执行一个预先定义好的Js方法  view.loadUrl("javascript:showMsg()");
+    2. js调用java
+      1.javascriptInterface 
+        但是这个官方提供的解决方案在Android4.2之前存在严重的安全漏洞。
+        在Android4.2之后，加入了@JavascriptInterface才得到解决。所以考虑到兼容低版本的系统，JavascriptInterface并不适合
+        
+      2.WebChromeClient.onConsoleMessage() 
+        这是Android提供给Js调试在Native代码里面打印日志信息的API，同时这也成了其中一种Js与Native代码通信的方法
+        console.log('log message that is going to native code') 
+        public class CustomWebChromeClient extends WebChromeClient {
+          Android后台得到响应
+        }
+        
+      3.WebViewClient.shouldOverrideUrlLoading()
+        这个方法的作用是拦截所有WebView的Url跳转。页面可以构造一个特殊格式的Url跳转，在前端做隐藏的scheme url ，后台拦截参数，
+        这是jsbridge的通用做法
+        
+        
+      4. WebChromeClient.onJsPrompt()
+        Js中调用window.prompt(message, value)  
+        public class CustomWebChromeClient extends WebChromeClient {
+            Android后台得到响应
+        }
+        参考资料: https://mp.weixin.qq.com/s?__biz=MzI1NjEwMTM4OA==&mid=2651231789&idx=1&sn=f11650ad0e18ddc12ece6e7559d5084c&scene=1&srcid=0513BWa7HuHjzPAeManB3w6C#rd
