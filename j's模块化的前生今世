@@ -1,0 +1,10 @@
+1.js异步加载的几种方式
+  1.defer （页面加载后加载）
+  2.async  （h5的属性，真正的异步加载）
+  3.onload加载页面后动态添加js文件
+2.js原生事件绑定方式
+  1 <div onclick='fn'></div>
+  2.var btn = document.getElementById('btn')
+    btn.onclick = fn
+  3.btn.addEventListener w3c事件（ie9以上 其他浏览器） 有三个参数 支持事件捕获 this指向dom
+    btn.attachEvent      ie 事件（ie9以下）  两个参数，不支持事件捕获 this指向window
