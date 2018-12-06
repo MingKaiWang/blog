@@ -18,3 +18,19 @@ requirejs AMD 依赖前置 一次加载所有依赖 通过require 回调异步�
 seajs CMD  同requirejs 但依赖后置 按需加载依赖
 es6 import 与require这种引入方式不同之处，1.import是在编译时执行，require 是在运行时执行
                                       2.import 是解构型写法  require 是赋值型写法
+
+mvc -> mvp -> mvvm
+1.mvc 
+v -> c -> model -> v
+v控制c c处理业务逻辑更新model model再更新v
+框架:extjs seajs requirejs
+
+2.mvp
+m <->p-> v
+p在中间做逻辑控制与v的更新
+框架: 开发android框架
+
+3.mvvm
+m <->vm-> v
+p在中间做逻辑控制与v的更新，数据的绑定与更新操作由脏检查或者defineproperty 自动完成
+框架: react vue angular
