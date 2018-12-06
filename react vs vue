@@ -21,3 +21,13 @@ destroyed 实例完全卸载
 不同点：react vue 在pc端的表现能力是相同的，不同的是react是一款view层的框架，没有双向绑定，开发风格更加严谨，表现出计算机科学的思想
 1.区分容器组件和傻瓜组件
 2.flux 增加reducer纯净函数概念
+
+vue react angular 都是mvvm的框架 mvvm是数据驱动框架，包括双向与单向绑定两种
+m -> v
+vue 使用defineproperty与依赖收集来实现  隐式
+react 脏检查 显示调用 setState
+angular 脏检查 隐式
+v -> m
+vue 事件方式 v-model语法糖
+angular 事件方式 ng-model语法糖
+react 没有实现 所以是单向绑定 运用reactlink插件来实现，本质还是事件
