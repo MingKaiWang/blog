@@ -19,8 +19,11 @@ destroyed 实例完全卸载
 
 
 不同点：react vue 在pc端的表现能力是相同的，不同的是react是一款view层的框架，没有双向绑定，开发风格更加严谨，表现出计算机科学的思想
-1.区分容器组件和傻瓜组件
+1.react区分容器组件和傻瓜组件（Smart&&dumb），提倡状态提升，vue是功能组件
 2.flux 增加reducer纯净函数概念
+3.react通过js操作一切的风格，而vue使用模板语法
+4.react通过高阶组件来扩展，vue使用mixin
+5.react内置功能少，依赖社区，vue内置功能多
 
 vue react angular 都是mvvm的框架 mvvm是数据驱动框架，数据绑定包括双向与单向两种（数据流都是单向的）
 m -> v
