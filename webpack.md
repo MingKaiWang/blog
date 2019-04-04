@@ -78,7 +78,8 @@ webpack启动后会从入口entry递归解析项目所依赖的模块，所以�
 2.开启模块热替换，使新修改的模块替换掉老的模块
 
 
-常用插件
+###常用插件###
+####生产####
 copy-webpack-plugin： 拷贝文件
 
 HtmlWebpackPlugin: 生成html入口
@@ -95,7 +96,8 @@ DefinePlugin： 定义环境变量
 
 ProvidePlugin：自动加载模块，不用到处import，相当于全局变量
 
-开发
+####开发####
+
 HotModuleReplacementPlugin: 模块热替换
 
 NamedModulesPlugin：显示模块相对路径，便于开发
