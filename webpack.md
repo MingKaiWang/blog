@@ -80,18 +80,29 @@ webpack启动后会从入口entry递归解析项目所依赖的模块，所以�
 
 常用插件
 copy-webpack-plugin： 拷贝文件
+
 HtmlWebpackPlugin: 生成html入口
+
 mini-css-extract-plugin： 将css从js中提取
+
 OptimizeCssAssetsPlugin： 压缩css
+
 UglifyJsPlugin：压缩js
+
 CommonsChunkPlugin：合并提炼第三方模块到vendor
+
 DefinePlugin： 定义环境变量
+
 ProvidePlugin：自动加载模块，不用到处import，相当于全局变量
 
 开发
 HotModuleReplacementPlugin: 模块热替换
+
 NamedModulesPlugin：显示模块相对路径，便于开发
+
 sourceMap：显示代码
+
 noEmitOnErrorsPlugin: 在编译出现错误时，使用 NoEmitOnErrorsPlugin 来跳过输出阶段
+
 ProgressPlugin: 实时显示编译进度
 
